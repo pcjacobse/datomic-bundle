@@ -1,0 +1,14 @@
+datomicdb:
+  build: datomic-pro-transactor
+  ports:
+    - "4336:4336"
+    - "4335:4335"
+    - "4334:4334"
+  volumes:
+    - "/data"
+rest:
+  build: datomic-pro-rest
+  ports:
+    - "8001:8001"
+  links:
+    - datomicdb
