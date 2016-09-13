@@ -5,7 +5,7 @@ datomicdb:
     - "4335:4335"
     - "4334:4334"
   volumes:
-    - "/data"
+    - "./data:/data"
 rest:
   build: datomic-pro-rest
   ports:
